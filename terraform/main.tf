@@ -148,9 +148,9 @@ data "aws_iam_policy_document" "pipeline" {
     resources = [aws_s3_bucket.lake.arn]
   }
   statement {
-    sid       = "AthenaAndGlue"
-    actions   = ["athena:StartQueryExecution", "athena:GetQueryExecution", "athena:GetQueryResults",
-                 "glue:GetDatabase", "glue:GetTable", "glue:GetTables", "glue:GetPartitions"]
+    sid = "AthenaAndGlue"
+    actions = ["athena:StartQueryExecution", "athena:GetQueryExecution", "athena:GetQueryResults",
+    "glue:GetDatabase", "glue:GetTable", "glue:GetTables", "glue:GetPartitions"]
     resources = ["*"]
   }
 }
